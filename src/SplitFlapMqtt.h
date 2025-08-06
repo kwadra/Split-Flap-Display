@@ -13,7 +13,7 @@ class SplitFlapMqtt {
     void setup();
     void loop();                                               // needed for PubSubClient3
     void publishState(const String &message);
-    void setAvailable(); // publish availability status
+    void setAvailable();                                       // publish availability status
     void setDisplay(SplitFlapDisplay *display);
     bool isConnected();
 

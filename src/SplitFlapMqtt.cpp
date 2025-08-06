@@ -103,7 +103,7 @@ void SplitFlapMqtt::publishState(const String &message) {
 }
 
 void SplitFlapMqtt::setAvailable() {
-    mqttClient.publish(topic_avail.c_str(), "online" , true);
+    mqttClient.publish(topic_avail.c_str(), "online", true);
 }
 
 void SplitFlapMqtt::loop() {
@@ -117,11 +117,10 @@ void SplitFlapMqtt::loop() {
         }
     }
     // Publish availability status every 60 seconds
-    if (millis() - lastAvailabilityPublish > 60000) {   
+    if (millis() - lastAvailabilityPublish > 60000) {
         setAvailable();
         lastAvailabilityPublish = millis();
     }
-
 }
 
 bool SplitFlapMqtt::isConnected() {
