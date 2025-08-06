@@ -199,10 +199,6 @@ void SplitFlapDisplay::writeString(String inputString, float speed, bool centeri
 
     if (mqtt && mqtt->isConnected()) {
         mqtt->publishState(displayString);
-    } else if (mqtt) {
-        // reconnect to MQTT if not connected
-        mqtt->setup();
-
     }
 }
 
